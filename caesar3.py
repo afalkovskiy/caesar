@@ -54,12 +54,13 @@ print('Your translated text is:')
 if mode[0] != 'b':				
     print(getTranslatedMessage(mode, message, key))
 else:
-    with open('1000-words.txt') as file1:
+    with open('5000-words.txt') as file1:
         lines = []
         for line in file1:
             lines.append(line.replace("\n",""))
 
     # print(lines)
+    # if a translated word with trial key is in the dictionary, print this line
     for key in range(1, MAX_KEY_SIZE + 1):
         text1 = getTranslatedMessage('d', message, key)
         split1 = text1.split()
